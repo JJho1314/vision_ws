@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find zed_wrapper)/launch/zed_no_tf.launch" /> 
+    <param name="weight" value="/home/nvidia/model/yolov4/yolo4_berkeley_fp16.rt"/>
+    <param name="send" value="/dev/motion-send"/>
+
+    <node pkg="cameracap" type="cameracap_node" name="cameracapnode" 
+	 output = "screen" respawn="true">
+	</node>
+</launch>
